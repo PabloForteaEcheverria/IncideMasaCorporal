@@ -1,0 +1,31 @@
+
+public class Persona {
+	
+	private double peso;
+	private double altura;
+	
+	public Persona(double peso, double altura) {
+		this.peso=peso;
+		this.altura=altura;
+	}
+
+	public double calculoIMC() {
+		return peso/(altura*altura);		
+	}
+	
+	public String mensaje() {
+		double imc=calculoIMC(); // creo la variable imc que me devuelve el valor de calculoIMC()		
+			if (imc < 18.5) {
+			return "Estas por debajo del peso normal";
+			}
+			else if (imc >= 18.5 && imc <25) {
+			return "Tienes un peso saludable. ¡Buen trabajo!";
+			}
+			else   {
+			return "Tu IMC es"+ imc +"Tienes sobrepeso. ¡Cuida tu salud!";
+			
+		}//fin mensaje
+
+	}// fin class
+}	
+
