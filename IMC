@@ -1,0 +1,14 @@
+
+
+public class IindiceMasaCorporal {
+
+	public static void main(String[] args) {
+		
+		Persona persona = new Persona(60,1.61);
+		
+		persona.calculoIMC();
+		System.out.println(persona.mensaje());
+
+	}
+
+}
