@@ -1,22 +1,23 @@
+/**
+ * Clase que representa el cálculo del Índice de Masa Corporal (IMC).
+ */
+public class IndiceMasaCorporal {
+	/**
+	 * Método principal que crea un objeto 'persona' con 
+	 * los atributos 60 (peso en kg) y 1.61 (altura en metros) respectivamente.
+	 */	
+		public static void main(String[] args) {
 
-public class IndicMasaCorporal {
-
- 
-
-	public static void main(String[] args) {
-		/**
-		 * Aqui en el Metodo  principal creamos el objeto 'persona' con 
-		 * los atributos 60 y 1.61 de peso y altura respectivamente.
-		 */
 		Persona persona = new Persona(60,1.61);
-		/**
-		 *Llamamos al metodo calculoIMC para aplicarlo a ese objeto 
-		 */
+	/**
+	 * Llamamos al método calculoIMC para calcular el IMC del objeto 'persona'.
+	 */
 		persona.calculoIMC();
-		/**
-		 * llamamos al metodo mensaje, para que nos devuelva el
-		 * mensaje personalizado de acuerdo a los valores del objeto creado.
-		 */
+	/**
+	 * llamamos al metodo mensaje, para que nos devuelva el
+	 * mensaje personalizado de acuerdo a los valores del objeto creado.
+	 * @return mensaje personalizado referente a su IMC
+	 */
 		System.out.println(persona.mensaje());
 
 	}
