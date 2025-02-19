@@ -1,21 +1,52 @@
 /**
- * Clase Persona que contiene el constructor con los datos peso y altura
- * necesarios para calcular el indice de masa corporal.
- */
-
+* Clase Persona que contiene el constructor con los datos peso y altura
+* necesarios para calcular el indice de masa corporal.
+*/
 
 public class Persona {
 	/**
-	 * Variables de objeto:
-	 */
+	* Variables de objeto:
+	*/
 	private double peso;
 	private double altura;
 	
 	/**
-	 * Constructor:
-	 */
+	* Constructor:
+	* @param peso Peso en kilogramos.
+	* @param altura Altura en metros.
+	*/
 	public Persona(double peso, double altura) {
 		this.peso=peso;
+		this.altura=altura;
+	}
+
+	/**
+	* Metodo para calculo de IMC:
+	* @return IMC su valor
+	*/
+	public double calculoIMC() {
+		return peso/(altura*altura);		
+	}
+
+	/**
+	* Metodo para devolver el mensaje personalizado:
+	* @return Mensaje personalizado sobre el estado del IMC.
+	*/
+	public String mensaje() {
+		double imc=calculoIMC(); // creo la variable imc que me devuelve el valor de calculoIMC()		
+			if (imc < 18.5) {
+			return "Estas por debajo del peso normal";
+			}
+			else if (imc >= 18.5 && imc <25) {
+			return "Tienes un peso saludable. ¡Buen trabajo!";
+			}
+			else   {
+			return "Tu IMC es "+ imc +" Tienes sobrepeso. ¡Cuida tu salud!";
+			
+		}//fin mensaje
+
+	}// fin class
+}	
 		this.altura=altura;
 	}
 
